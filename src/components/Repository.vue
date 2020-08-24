@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <div class="w-100 mt-5"></div>
-
+    <div class="fade-inn-transition">
         <!-- v-for executes a new line after each loop, use float-left removes that-->
-        <div v-for="item in list" v-bind:key="item.id" class="float-right p-5 mt-5">
+        <div v-for="item in list" v-bind:key="item.id" class="float-right p-5 ">
             <div id="card-bot">
-                <a href="#" class="text-decoration-none stretched-link">
+                <!--TODO: pass link object as props with vue-router <a href="objectHere" class="text-decoration-none stretched-link">  -->
                 <div id="card-bot-img">
                     <img src="../assets/github_logo.png" class="w-50 float-right mt-2" alt="img not found">
                 </div>
@@ -20,19 +18,18 @@
                     <div id="card-mid-description" class="mt-5 pt-5">
                         <p>
                             {{item.description}}
-
                         </p>
                     </div>
                 </div>
-                </a>
+
             </div>
 
         </div>
+
     </div>
 
 </template>
 
-<!-- Presentational component: Render HTML based on props from Container component-->
 <script>
     import axios from "axios"
 
@@ -40,7 +37,7 @@
         name: 'Repository'
         ,
         data() {
-            return {list: undefined, repoImg: "default github style image for all repos"}
+            return {list: undefined}
         },
         mounted() {
             axios
@@ -50,7 +47,9 @@
                     this.list = response.data;
                 }))
         }
+
     }
+
 </script>
 
 <style>
@@ -58,9 +57,9 @@
     #card-bot {
         height: 20rem;
         width: 16rem;
-        padding: 0;
-        transform: translate(0, -8%);
-        margin-top: 20%;
+        margin-top: 16%;
+        transform: translate(-5%, -10%);
+
     }
 
     #card-bot-img {
@@ -117,8 +116,8 @@
 
     #card-footer {
         text-transform: uppercase;
-        background: rgb(244,157,202);
-        background: linear-gradient(0deg, rgba(244,157,202,1) 0%, rgba(253,214,83,1) 100%);
+        background: rgb(244, 157, 202);
+        background: linear-gradient(0deg, rgba(244, 157, 202, 1) 0%, rgba(253, 214, 83, 1) 100%);
         color: white;
         font-weight: bold;
         text-align: center;
@@ -126,6 +125,21 @@
         font-size: 15px;
         text-shadow: none;
         margin-top: 35%;
+    }
+
+
+    @keyframes setOpacity { /* pulses */
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fade-inn-transition {
+        opacity: 1;
+        animation: setOpacity 2s;
     }
 </style>
 

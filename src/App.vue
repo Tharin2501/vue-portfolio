@@ -1,18 +1,18 @@
 <template>
     <div id="app">
-
-
-     <Repository/>
+        <Home/>
+        <Repository/>
     </div>
 </template>
 
 <script>
     import Repository from "./components/Repository";
-
+    import Home from "./components/Home"
 
     export default {
         components: {
-            Repository
+            Repository,
+            Home
         }
     }
 </script>
