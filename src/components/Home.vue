@@ -1,14 +1,14 @@
 <template>
-    <div class="title-container ">
-        <h1 class="title">Tharin</h1>
-        <h1 class="title">Chobkaphol</h1>
+    <div class="title-container  ">
+        <h2 class="title">Tharin</h2>
+        <h2 class="title">Chobkaphol</h2>
         <h4 class="under-title pt-3">
             <p>I am a programmer interested in new frontend technologies.
             </p>
         </h4>
         <div>
-            <h3>Here are some of my projects: <a class="styled-Link" href="https://github.com/Tharin2501">Github</a>
-            </h3>
+            <h3>You can view my <a class="styled-Link" href="https://github.com/Tharin2501">Github </a><a>here</a></h3>
+            <h3>You can also click on a card to go directly to the repository</h3>
         </div>
     </div>
 </template>
