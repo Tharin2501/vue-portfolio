@@ -1,24 +1,16 @@
 # vue-portfolio
 
-## Project setup
-```
-yarn install
-```
+## About 
+This is my first Vue project ever. I wanted a portofolio site where i could display my work 
+to different employers.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+The project displays all my public repositories by using the github API. 
+By doing this all future repositories will automatically be added on to this site.
 
-### Compiles and minifies for production
+## Technologies used
 ```
-yarn build
+Vue
+Javascript
+HTML/CSS
+Yarn
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
